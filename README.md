@@ -2,10 +2,32 @@
 
 one click to config react development environment
 
+quick start for developing React.
 
-主要在于配置 webpack ，各种特性
+how about http://standardjs.com/
 
 ## what we get
+
+dev:
+
+- webpack
+ - devServer
+ - uglifyJsPlugin
+ - CommonsChunkPlugin
+- babel
+- eslint
+
+dependencies:
+
+- react
+- react-router
+- react-dom
+
+todo:
+
+- immutable.js
+- Redux
+- dev vs production
 
 ### babel & webpack：
 
@@ -24,23 +46,29 @@ config babel presets:
 }
 ```
 
-#### code spliting
+#### webpack-dev-server
+
+add this to webpack.config.js
+```
+devServer: {
+    inline: true,
+    contentBase: './app',
+    port: 8100
+}
+```
 
 ### react:
 ```
 npm i react react-dom react-router --save
 ```
 
-### Lingting(语法检查):
+### Lingting:
 
-use airbnb style guides
+- linter ： atom plugin
+- linter-eslint ： atom-plugin
+- eslint
+- airbnb style guides
 
-two tools to use:
-
-- ESLint ：
-
-http://eslint.org/  
-https://github.com/babel/babel-eslint
 ```
 npm install --save-dev eslint babel-eslint
 
@@ -63,8 +91,19 @@ atom & sublime both have plugin.
 - atom:https://atom.io/packages/language-babel
 - sublime:https://github.com/babel/babel-sublime
 
+### strip-loader
 
+Working with different config files for production vs development
 
+## atom-plugins
+
+代码静态检查和格式化，插件与配置相互缠绕，导致的问题，还有router语法的不同。
+
+- atom-beautify
+- react
+- language-babel
+- linter - jshint  代码静态检查
+- ESlint
 
 ## todo
 
