@@ -73,16 +73,13 @@ npm i react react-dom react-router --save
 npm install --save-dev eslint babel-eslint
 
 // config .eslintrc.js
-{
-   "parser": "babel-eslint",
-    "rules": {
-      ...
-    }
-  }
+module.exports = {
+    "extends": "airbnb",
+    "plugins": [
+        "react"
+    ]
+}
 ```
-just can be used in command line.
-
-- AtomLinter :  atom plugin. I prefer this to automate linting.
 
 ### JSX support
 

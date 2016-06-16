@@ -24,11 +24,11 @@ module.exports = {
   },
   plugins: [
         // just use in production dev
-    new UglifyJsPlugin({
-      compress: {
-        warnings: false,
-      },
-    }),
+        // new UglifyJsPlugin({
+        //   compress: {
+        //     warnings: false,
+        //   },
+        // }),
         // separate common code
         // new CommonsChunkPlugin('init.js')
   ],
