@@ -8,22 +8,7 @@ import {
     browserHistory,
     IndexLink,
 } from 'react-router';
-class App extends Component {
-  render() {
-    return (
-      <Router history={browserHistory}>
-        <Route path="/" component={Container}>
-          <IndexRoute component={Home} />
-          <Route path="address" component={Address}>
-            <IndexRoute component={TwitterFeed} />
-            <Route path="instagram" component={Instagram} />
-          </Route>
-          <Route path="*" component={NotFound} />
-        </Route>
-      </Router>
-    );
-  }
-}
+
 const Home = () => <h1>Hello from Home!</h1>;
 const Address = (props) => <div>
     <br />
@@ -45,7 +30,24 @@ const Nav = () => (
   </div>
 );
 const Container = (props) => <div>
-    <Nav /> {props.children}
+  <Nav /> {props.children}
 </div>;
+
+class App extends Component {
+  render() {
+    return (
+      <Router history={browserHistory}>
+        <Route path="/" component={Container}>
+          <IndexRoute component={Home} />
+          <Route path="address" component={Address}>
+            <IndexRoute component={TwitterFeed} />
+            <Route path="instagram" component={Instagram} />
+          </Route>
+          <Route path="*" component={NotFound} />
+        </Route>
+      </Router>
+    );
+  }
+}
 
 export default App;
