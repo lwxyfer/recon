@@ -104,17 +104,9 @@ Working with different config files for production vs development
 
 ## todo
 
-确定开发环境
-
-Unix
-
-$ BABEL_ENV=production [COMMAND]
-$ NODE_ENV=production [COMMAND]
-Windows
-
-$ SET BABEL_ENV=production
-$ [COMMAND]
-
+1. 跨操作系统设置 cross env
+2. 区分生产环境 和 开发环境
+3. webpack externals: 什么情况下用
 
 ## reference
 
